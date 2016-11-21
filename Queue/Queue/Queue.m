@@ -19,6 +19,7 @@
 -(instancetype) init {
   if (self = [super init]) {
     self.myQueue = [[NSMutableArray alloc] init];
+    self.mySize = 0; 
   }
   
   return self;
@@ -41,6 +42,7 @@
   if(![self isEmpty]) {
     firstObject = self.myQueue.firstObject;
     [self.myQueue removeObjectAtIndex:0];
+    self.mySize --;
     
   }
   return  firstObject;
